@@ -1,0 +1,133 @@
+<idea-plugin>
+  <id>com.geekmake.plugin.id</id>
+  <name>army-knife</name>
+  <version>1.1</version>
+  <vendor email="pez1420@gmail.com" url="http://www.geek-make.com">geekmaker</vendor>
+
+  <description><![CDATA[
+      <tag> A common command for Java based applications </tag>
+      <h4>Army knife is a userful tool that helps developers to find commonly used command of different middleware so that developers needn't to remember commands that are hard to remember!</h4>
+      <ul>
+      <li>The plugin supports many commands including JVM, Arthas, Linux, Redis, Dubbo, Mysql etc.</li>
+      <li>JVM: jmap, jstat, jstack</li>
+      <li>Arthas: jad, watch, refine, tt etc.</li>
+      <li>Linux: ss, lsof, top, log etc.</li>
+      <li>Redis: client etc.</li>
+      <li>Mysql: deadlock check etc.</li>
+    ]]></description>
+
+  <change-notes>army-knife</change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="arthasWatch" class="com.geekmake.plugin.arthas.ArthasWatchAnAction"
+            text=" Arthas Watch"
+            description=" Arthas Watch">
+    </action>
+    <action id="arthasThread" class="com.geekmake.plugin.arthas.ArthasThreadAnAction"
+            text=" Arthas Thread"
+            description=" Arthas Thread">
+    </action>
+    <action id="arthasRefine" class="com.geekmake.plugin.arthas.ArthasRefineAnAction"
+            text=" Arthas Refine"
+            description=" Arthas Refine">
+    </action>
+    <action id="arthasJad" class="com.geekmake.plugin.arthas.ArthasJadAnAction"
+            text=" Arthas Jad"
+            description=" Arthas Jad">
+    </action>
+
+    <action id="arthasTimeTunel" class="com.geekmake.plugin.arthas.ArthasTimeTunelAnAction"
+            text=" Arthas tt"
+            description=" Arthas tt">
+    </action>
+
+    <action id="installArthas" class="com.geekmake.plugin.arthas.InstallArthasAnAction"
+            text=" Mac or Linux install arthas"
+            description=" Arthas Watch">
+    </action>
+    <action id="jstackAction" class="com.geekmake.plugin.jvm.JstackAction"
+            text="jstack"
+            description=" jvm jstack">
+    </action>
+    <action id="jmapAction" class="com.geekmake.plugin.jvm.JmapAction"
+            text="jmap"
+            description=" jmap">
+    </action>
+    <action id="jstatAction" class="com.geekmake.plugin.jvm.JstatAction"
+            text="jstat"
+            description=" jstat">
+    </action>
+    <action id="dubboCommandAction" class="com.geekmake.plugin.dubbo.DubboCommandAction"
+            text="Dubbo 常用命令"
+            description=" dubbo">
+    </action>
+
+    <action id="openFileAction" class="com.geekmake.plugin.linux.LinuxOpenFileAction"
+            text="查询linux文件句柄"
+            description=" openFileAction">
+    </action>
+    <action id="linuxLogAction" class="com.geekmake.plugin.linux.LinuxLogAction"
+            text="Linux 日志排查线上问题常见命令"
+            description=" log">
+    </action>
+
+    <action id="helperAction" class="com.geekmake.plugin.HelperAction"
+            text="Java Command Idea Help"
+            description=" helperAction">
+    </action>
+
+    <action id="mysqlCommandAction" class="com.geekmake.plugin.dubbo.MysqlCommandAction"
+            text="Mysql 常用指令"
+            description=" mysqlCommandAction">
+    </action>
+
+    <action id="redisCommandAction" class="com.geekmake.plugin.linux.RedisCommandAction"
+            text="Redis 常用指令"
+            description=" redisCommandAction">
+    </action>
+
+    <group id="army-knife-plugin" popup="true" text="Army Knife" description="Army Knife">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <group id="army-knife-plugin-arthas" popup="true" text="Arthas">
+        <reference ref="arthasWatch"/>
+        <reference ref="arthasThread"/>
+        <reference ref="arthasRefine"/>
+        <reference ref="arthasJad"/>
+        <reference ref="arthasTimeTunel"/>
+        <reference ref="installArthas"/>
+        <separator/>
+      </group>
+      <separator/>
+      <group id="army-knife-plugin-jvm" popup="true" text="JVM">
+        <reference ref="jstackAction"/>
+        <reference ref="jmapAction"/>
+        <reference ref="jstatAction"/>
+      </group>
+      <separator/>
+      <group id="army-knife-plugin-dubbo" popup="true" text="Dubbo">
+        <reference ref="dubboCommandAction"/>
+      </group>
+      <separator/>
+      <group id="army-knife-plugin-linux" popup="true" text="Linux">
+        <reference ref="linuxLogAction"/>
+        <reference ref="openFileAction"/>
+        <reference ref="mysqlCommandAction"/>
+        <reference ref="redisCommandAction"/>
+      </group>
+      <separator/>
+      <reference ref="helperAction"/>
+    </group>
+  </actions>
+
+</idea-plugin>
