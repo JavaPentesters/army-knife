@@ -9,6 +9,15 @@
 
 ### Key Features
 
++ 插件提供一套定位线上问题的方法论
+++ **Arthas**是Alibaba开源的Java诊断工具，它是用于排查线上问题的一款利器。因此，插件提供了快捷使用**Arthas**常用命令的快速方式。
+++ 插件提供了Linux常用性能分析工具以及命令，如top（cpu）、free（内存）、df（磁盘）、dstat（网络流量）、pstack、vmstat、strace（底层系统调用）
++ 插件提供了查找业务日志的常用命令，如grep、tail
++ 插件提供了分析GC日志的常用命令
++ 插件提供了排查Mysql线上问题的常用命令，如deadlock死锁问题
++ 插件提供了Dubbo、Redis、Nginx(Openresty)等常用命令
++ 支持JDK8 +
++ 插件支持Linux/Mac
 
 ### Quick Start
 
