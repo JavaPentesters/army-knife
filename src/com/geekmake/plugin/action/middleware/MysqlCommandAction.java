@@ -1,8 +1,7 @@
-package com.geekmake.plugin.dubbo;
+package com.geekmake.plugin.action.middleware;
 
 import com.geekmake.plugin.BaseAnAction;
 import com.geekmake.plugin.config.IdeActionEvent;
-import com.geekmake.plugin.dialog.LinuxOpenFileDialog;
 import com.geekmake.plugin.dialog.MysqlCommandDialog;
 
 /**

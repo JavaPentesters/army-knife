@@ -1,7 +1,15 @@
 package com.geekmake.plugin.dialog;
 
-import com.geekmake.plugin.jvm.enums.JmapCommandEnum;
-import com.geekmake.plugin.jvm.enums.JstatCommandEnum;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.*;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.geekmake.plugin.action.jvm.enums.JstatCommandEnum;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 import com.intellij.icons.AllIcons;
@@ -12,11 +20,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.ui.components.labels.ActionLink;
 import com.intellij.ui.components.labels.LinkLabel;
-import org.apache.commons.lang3.StringUtils;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 
 public class JstatCommandDialog extends JDialog {
     /** 工程信息 */

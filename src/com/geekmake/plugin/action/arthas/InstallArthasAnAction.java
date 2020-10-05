@@ -1,4 +1,4 @@
-package com.geekmake.plugin.arthas;
+package com.geekmake.plugin.action.arthas;
 
 import com.geekmake.plugin.BaseAnAction;
 import com.geekmake.plugin.config.IdeActionEvent;

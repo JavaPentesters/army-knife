@@ -1,4 +1,4 @@
-package com.geekmake.plugin.linux;
+package com.geekmake.plugin.action.middleware;
 
 import com.geekmake.plugin.BaseAnAction;
 import com.geekmake.plugin.config.IdeActionEvent;

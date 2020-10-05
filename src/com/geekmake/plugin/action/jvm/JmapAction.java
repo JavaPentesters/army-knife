@@ -1,4 +1,4 @@
-package com.geekmake.plugin.jvm;
+package com.geekmake.plugin.action.jvm;
 
 import com.geekmake.plugin.BaseAnAction;
 import com.geekmake.plugin.config.IdeActionEvent;

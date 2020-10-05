@@ -9,7 +9,7 @@ import javax.swing.*;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.geekmake.plugin.jvm.enums.JmapCommandEnum;
+import com.geekmake.plugin.action.jvm.enums.JmapCommandEnum;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 import com.intellij.icons.AllIcons;

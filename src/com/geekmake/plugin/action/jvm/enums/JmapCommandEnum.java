@@ -1,4 +1,4 @@
-package com.geekmake.plugin.jvm.enums;
+package com.geekmake.plugin.action.jvm.enums;
 
 /**
  * @author pez1420@gmail.com

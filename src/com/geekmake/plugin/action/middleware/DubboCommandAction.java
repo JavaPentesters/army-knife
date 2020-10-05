@@ -1,4 +1,4 @@
-package com.geekmake.plugin.dubbo;
+package com.geekmake.plugin.action.middleware;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
