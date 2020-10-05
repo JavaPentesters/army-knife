@@ -1,4 +1,21 @@
 
+
+# army-knife idea plugin
+
+### Background
+作为一名开发人员,不仅需要掌握系统开发技能,更应该具备处理线上问题的能力。
+我们排查线上问题时经常需要使用一些常用命令，有些命令又非常繁琐或者程序员一时想不起来。
+工欲善其事必先利其器，排查线上问题时是争分夺秒的，我们需要以最快速、便捷的方式拷贝到需要的命令,army-knife IDEA就是用来解决这个问题的。
+
+### Key Features
+
+
+### Quick Start
+
+
+
+
+
 CodingEasier:
 https://gitee.com/Chave-Z/CodingEasier
 
