@@ -77,8 +77,8 @@
                 description=" jstat">
         </action>
         <action id="gcAction" class="com.geekmake.plugin.action.jvm.GcAction"
-                text="jstat"
-                description=" jstat">
+                text="fullgc"
+                description=" fullgc">
         </action>
         <action id="dubboCommandAction" class="com.geekmake.plugin.action.middleware.DubboCommandAction"
                 text="Dubbo 常用命令"
