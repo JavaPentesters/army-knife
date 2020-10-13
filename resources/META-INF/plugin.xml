@@ -76,6 +76,10 @@
                 text="jstat"
                 description=" jstat">
         </action>
+        <action id="gcAction" class="com.geekmake.plugin.action.jvm.GcAction"
+                text="jstat"
+                description=" jstat">
+        </action>
         <action id="dubboCommandAction" class="com.geekmake.plugin.action.middleware.DubboCommandAction"
                 text="Dubbo 常用命令"
                 description=" dubbo">
@@ -105,6 +109,16 @@
                 description=" redisCommandAction">
         </action>
 
+        <action id="curlAnAction" class="com.geekmake.plugin.action.http.CurlAnAction"
+                text="Curl 常用指令"
+                description=" curlAnAction">
+        </action>
+
+        <action id="formatJsonAnAction" class="com.geekmake.plugin.action.http.FormatJsonAnAction"
+                text="Json/Xml 格式化"
+                description=" formatJsonAnAction">
+        </action>
+
         <group id="army-knife-plugin" popup="true" text="Army Knife" description="Army Knife">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <group id="army-knife-plugin-arthas" popup="true" text="Arthas">
@@ -121,6 +135,7 @@
                 <reference ref="jstackAction"/>
                 <reference ref="jmapAction"/>
                 <reference ref="jstatAction"/>
+                <reference ref="gcAction"/>
             </group>
             <separator/>
             <group id="army-knife-plugin-middleware" popup="true" text="Middleware">
@@ -132,6 +147,11 @@
             <group id="army-knife-plugin-linux" popup="true" text="Linux">
                 <reference ref="linuxLogAction"/>
                 <reference ref="openFileAction"/>
+            </group>
+            <separator/>
+            <group id="army-knife-plugin-http" popup="true" text="Http">
+                <reference ref="curlAnAction"/>
+                <reference ref="formatJsonAnAction"/>
             </group>
             <separator/>
             <reference ref="helperAction"/>
