@@ -5,25 +5,11 @@
     <vendor email="pez1420@gmail.com" url="http://www.geek-make.com">geekmaker</vendor>
 
     <description><![CDATA[
-      <tag> A common command for Java based applications </tag>
-      <h4>Army knife is a userful tool that helps developers to find commonly used command of different middleware so that developers needn't to remember commands that are hard to remember!</h4>
-      <ul>
-      <li>The plugin supports many commands including JVM, Arthas, Linux, Redis, Dubbo, Mysql etc.</li>
-      <li>JVM: jmap, jstat, jstack</li>
-      <li>Arthas: jad, watch, refine, tt etc.</li>
-      <li>Linux: ss, lsof, top, log etc.</li>
-      <li>Redis: client etc.</li>
-      <li>Mysql: deadlock check etc.</li>
+        Replaced by description.html .....................
     ]]></description>
 
     <change-notes><![CDATA[
-    <ul>
-      <li>version 1.0</li>
-      <li>version 1.1</li>
-       <li>version 1.2<br>
-        add action "Generate @see doc for override method"<br>
-      </li>
-    </ul>
+        Replaced by CHANGELOG.md .....................
     ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
@@ -34,7 +20,44 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <localInspection
+                language="XML" groupPath="XML" displayName="GeekSec 101: Mybatis XML SQL注入漏洞"
+                groupName="GeekSec" enabledByDefault="true" level="ERROR"
+                implementationClass="com.geekmake.plugin.security.rule.MybatisXmlSQLi"
+        />
+
+        <localInspection language="JAVA"
+                         displayName="SDK: '==' or '!=' used instead of 'equals()'"
+                         groupPath="Java"
+                         groupBundle="messages.InspectionsBundle"
+                         groupKey="group.names.probable.bugs"
+                         enabledByDefault="true"
+                         level="ERROR"
+                         implementationClass="com.geekmake.plugin.security.rule.ComparingReferencesInspection"/>
+
+        <!--
+Extend the IntelliJ Platform local inspection type, and connect it to the implementation class in this plugin.
+<localInspection> type element is applied within the scope of a file under edit.
+It is preferred over <inspectionToolProvider>
+@see intellij.platform.resources.LangExtensionPoints
+@see com.intellij.codeInspection.InspectionProfileEntry
+Attributes:
+language= Language ID
+shortName= Not specified, will be computed by the underlying implementation classes.
+displayName= The string to be shown in the Preferences | Editor | Inspections panel
+The displayName gets registered to identify this inspection.
+Can be localized using key= and bundle= attributes instead.
+groupPath= Defines the outermost grouping for this inspection in
+the Preferences | Editor | Inspections panel. Not localized.
+groupBundle= Name of *.bundle file to translate groupKey.
+In this case reuse an IntelliJ Platform bundle file from intellij.platform.resources.en
+groupKey= Key to use for translation subgroup name using groupBundle file.
+In this case reuse the IntelliJ Platform subcategory "Probable bugs"
+enabledByDefault= Inspection state when Inspections panel is created.
+level= The default level of error found by this inspection, e.g. INFO, ERROR, etc.
+@see com.intellij.codeHighlighting.HighlightDisplayLevel
+implementationClass= FQN of inspection implementation
+-->
     </extensions>
 
     <actions>
