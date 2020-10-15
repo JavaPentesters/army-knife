@@ -33,7 +33,7 @@
 ## RoadMap
 
 |  Version  |  Milestone   | Features  |
-|  ----  | ----  |
+|  ----  | ----  |  ----  |
 | 1.2.0 | 2020.10  | 发布正式release版本 |
 | 1.3.0 | 2020.11  | 支持ShadowSocks协议的客户端 |
 
