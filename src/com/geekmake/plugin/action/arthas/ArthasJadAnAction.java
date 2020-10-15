@@ -6,6 +6,7 @@ import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 
 /**
+ * References: https://arthas.aliyun.com/doc/jad.html
  *
  * @author pez1420@gmail.com
  * @version $Id: ArthasJadAnAction.java v 0.1 2020/3/26 9:53 下午 pez1420 Exp $$
@@ -13,7 +14,6 @@ import com.geekmake.plugin.utils.NotificationUtils;
 public class ArthasJadAnAction extends BaseAnAction {
 
     /**
-     *
      * @param actionEvent ActionEvent
      */
     @Override

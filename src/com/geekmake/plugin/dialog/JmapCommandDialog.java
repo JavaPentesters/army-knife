@@ -9,6 +9,7 @@ import javax.swing.*;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.action.jvm.enums.JmapCommandEnum;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
@@ -43,6 +44,7 @@ public class JmapCommandDialog extends JDialog {
 
     /** 关闭按钮 */
     private JButton   closeButton;
+    private LinkLabel bestExample;
 
     public JmapCommandDialog(Project project) {
         this.project = project;
@@ -126,10 +128,18 @@ public class JmapCommandDialog extends JDialog {
         helpLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         helpLink.setPaintUnderline(false);
+
+        bestExample = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
+            @Override
+            public void actionPerformed(AnActionEvent anActionEvent) {
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "jmap.md");
+            }
+        });
+        bestExample.setPaintUnderline(false);
     }
 
     public void open(String title) {

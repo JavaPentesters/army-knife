@@ -6,6 +6,7 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.*;
 
+import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 import com.intellij.icons.AllIcons;
@@ -100,7 +101,7 @@ public class JstackCommandDialog extends JDialog {
         helpLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         helpLink.setPaintUnderline(false);
@@ -108,7 +109,7 @@ public class JstackCommandDialog extends JDialog {
         link0 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "jstack.md");
             }
         });
         link0.setPaintUnderline(false);
@@ -116,7 +117,7 @@ public class JstackCommandDialog extends JDialog {
         link1 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "jstack.md");
             }
         });
         link1.setPaintUnderline(false);
@@ -124,7 +125,7 @@ public class JstackCommandDialog extends JDialog {
         link2 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "jstack.md");
             }
         });
         link2.setPaintUnderline(false);
@@ -132,7 +133,7 @@ public class JstackCommandDialog extends JDialog {
         link3 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "jstack.md");
             }
         });
         link3.setPaintUnderline(false);
@@ -140,7 +141,7 @@ public class JstackCommandDialog extends JDialog {
         link4 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "jstack.md");
             }
         });
         link4.setPaintUnderline(false);

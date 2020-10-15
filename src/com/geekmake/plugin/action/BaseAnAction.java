@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.PsiUtils;
@@ -19,16 +20,6 @@ import com.intellij.psi.*;
 import com.intellij.psi.impl.source.PsiClassReferenceType;
 
 /**
- * uast-lint-common:
- * https://github.com/yanex/uast-lint-common/blob/master/tools/base/lint/libs/lint-api/src/main/java/com/android/tools/lint/client/api/JavaEvaluator.java
- *
- * http://liumoran.cn/articleDetail/201
- *
- * https://juejin.im/post/5d56252ae51d4561b416d45a
- *
- * https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/deploying_plugin.html
- *
- * https://www.codota.com/code/java/methods/com.intellij.psi.PsiParameterList/getParameters
  *
  *
  * @author pez1420@gmail.com
@@ -102,7 +93,7 @@ public abstract class BaseAnAction extends AnAction {
         String className = ((PsiClassReferenceType) psiArrayType.getComponentType()).getClassName();
         // 读取Class
         VirtualFile virtualFile = PsiUtils.firstMatchingVirtualFileInProject(project,
-            className + Constant.DOT_JAVA);
+            className + Constants.DOT_JAVA);
         PsiFile file = PsiManager.getInstance(project).findFile(virtualFile);
         if (file instanceof PsiJavaFile) {
             PsiJavaFile javaFile = (PsiJavaFile) file;

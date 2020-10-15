@@ -6,6 +6,7 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.*;
 
+import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 import com.intellij.icons.AllIcons;
@@ -110,7 +111,7 @@ public class MysqlCommandDialog extends JDialog {
         helpLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         helpLink.setPaintUnderline(false);
@@ -118,7 +119,7 @@ public class MysqlCommandDialog extends JDialog {
         link0 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         link0.setPaintUnderline(false);
@@ -126,7 +127,7 @@ public class MysqlCommandDialog extends JDialog {
         link1 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         link1.setPaintUnderline(false);
@@ -134,7 +135,7 @@ public class MysqlCommandDialog extends JDialog {
         link2 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         link2.setPaintUnderline(false);
@@ -142,7 +143,7 @@ public class MysqlCommandDialog extends JDialog {
         link3 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         link3.setPaintUnderline(false);
@@ -150,7 +151,7 @@ public class MysqlCommandDialog extends JDialog {
         link4 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         link4.setPaintUnderline(false);
@@ -158,7 +159,7 @@ public class MysqlCommandDialog extends JDialog {
         cpu100Link = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         cpu100Link.setPaintUnderline(false);
@@ -166,7 +167,7 @@ public class MysqlCommandDialog extends JDialog {
         deadLockLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "mysql.md");
             }
         });
         deadLockLink.setPaintUnderline(false);

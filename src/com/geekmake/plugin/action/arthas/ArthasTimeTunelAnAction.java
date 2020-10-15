@@ -5,6 +5,7 @@ import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.dialog.ArthasTimeTunelCommandDialog;
 
 /**
+ * References: https://arthas.aliyun.com/doc/tt.html
  *
  * @author pez1420@gmail.com
  * @version $Id: ArthasTimeTunelAnAction.java v 0.1 2020/9/29 10:43 上午 pez1420 Exp $$

@@ -6,6 +6,7 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.*;
 
+import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
@@ -89,7 +90,7 @@ public class DubboCommandDialog extends JDialog {
         helpLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         helpLink.setPaintUnderline(false);
@@ -97,7 +98,7 @@ public class DubboCommandDialog extends JDialog {
         link0 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         link0.setPaintUnderline(false);
@@ -105,7 +106,7 @@ public class DubboCommandDialog extends JDialog {
         link4 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "dubbo.md");
             }
         });
         link4.setPaintUnderline(false);

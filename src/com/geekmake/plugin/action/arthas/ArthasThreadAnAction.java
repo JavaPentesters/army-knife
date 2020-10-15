@@ -10,7 +10,7 @@ import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 
 /**
- * thread -n 3 : 当前最消耗CPU的N个线程
+ *  References: https://arthas.aliyun.com/doc/thread.html
  *
  * @author pez1420@gmail.com
  * @version $Id: ArthasThreadAnAction.java v 0.1 2020/3/26 8:18 下午 pez1420 Exp $$
@@ -21,7 +21,7 @@ public class ArthasThreadAnAction extends BaseAnAction {
     private static final Logger LOGGER = LoggerFactory.getLogger(JstackAction.class);
 
     /**
-     *  thread -n 3
+     *  thread -n 3 : 当前最消耗CPU的N个线程
      *  
      * @param actionEvent
      */

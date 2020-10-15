@@ -6,6 +6,8 @@ import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 
 /**
+ * References: https://arthas.aliyun.com/doc/redefine.html
+ *
  * @author pez1420@gmail.com
  * @version $Id: ArthasRefineAnAction.java v 0.1 2020/3/26 9:40 下午 pez1420 Exp $$
  */

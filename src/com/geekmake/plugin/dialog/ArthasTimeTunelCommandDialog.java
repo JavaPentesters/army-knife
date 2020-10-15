@@ -9,6 +9,7 @@ import javax.swing.*;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.action.jvm.enums.ArthasTtCommandEnum;
 import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.utils.ClipboardUtils;
@@ -49,6 +50,8 @@ public class ArthasTimeTunelCommandDialog extends JDialog {
     private JTextField     textField1;
     private JButton        copyCmdButton1;
     private JLabel         label1;
+    /** 最佳实践按钮 */
+    private LinkLabel      bestExample;
 
     public ArthasTimeTunelCommandDialog(IdeActionEvent ideActionEvent) {
         this.ideActionEvent = ideActionEvent;
@@ -141,10 +144,18 @@ public class ArthasTimeTunelCommandDialog extends JDialog {
         helpLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         helpLink.setPaintUnderline(false);
+
+        bestExample = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
+            @Override
+            public void actionPerformed(AnActionEvent anActionEvent) {
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "arthas.md");
+            }
+        });
+        bestExample.setPaintUnderline(false);
     }
 
     public void open(String title) {

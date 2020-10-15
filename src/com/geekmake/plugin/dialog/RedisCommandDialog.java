@@ -6,6 +6,7 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.*;
 
+import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 import com.intellij.icons.AllIcons;
@@ -46,7 +47,7 @@ public class RedisCommandDialog extends JDialog {
     private LinkLabel  link1;
     private LinkLabel  link2;
     private LinkLabel  link3;
-    private LinkLabel  cpu100Link;
+    private LinkLabel  commonIssuesLink;
     private LinkLabel  deadLockLink;
     private LinkLabel  link4;
     private JButton    copyButton4;
@@ -111,7 +112,7 @@ public class RedisCommandDialog extends JDialog {
         helpLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         helpLink.setPaintUnderline(false);
@@ -119,7 +120,7 @@ public class RedisCommandDialog extends JDialog {
         link0 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         link0.setPaintUnderline(false);
@@ -127,7 +128,7 @@ public class RedisCommandDialog extends JDialog {
         link1 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         link1.setPaintUnderline(false);
@@ -135,7 +136,7 @@ public class RedisCommandDialog extends JDialog {
         link2 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         link2.setPaintUnderline(false);
@@ -143,7 +144,7 @@ public class RedisCommandDialog extends JDialog {
         link3 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         link3.setPaintUnderline(false);
@@ -151,23 +152,23 @@ public class RedisCommandDialog extends JDialog {
         link4 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         link4.setPaintUnderline(false);
 
-        cpu100Link = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
+        commonIssuesLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "redis.md");
             }
         });
-        cpu100Link.setPaintUnderline(false);
+        commonIssuesLink.setPaintUnderline(false);
 
         deadLockLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "redis.md");
             }
         });
         deadLockLink.setPaintUnderline(false);
