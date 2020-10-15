@@ -7,10 +7,6 @@ package com.geekmake.plugin.utils;
 public class ClassUtils {
 
     public static String getSimpleClassName(String className) {
-        return className.substring(className.lastIndexOf(".")+1);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(getSimpleClassName(ClassUtils.class.getName()));
+        return className.substring(className.lastIndexOf(".") + 1);
     }
 }

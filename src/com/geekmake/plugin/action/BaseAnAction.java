@@ -1,4 +1,4 @@
-package com.geekmake.plugin;
+package com.geekmake.plugin.action;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.jetbrains.annotations.NotNull;
@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 
 import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.utils.ClipboardUtils;
-import com.geekmake.plugin.utils.Constant;
 import com.geekmake.plugin.utils.PsiUtils;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;

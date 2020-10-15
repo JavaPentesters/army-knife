@@ -36,28 +36,28 @@
                          implementationClass="com.geekmake.plugin.security.rule.ComparingReferencesInspection"/>
 
         <!--
-Extend the IntelliJ Platform local inspection type, and connect it to the implementation class in this plugin.
-<localInspection> type element is applied within the scope of a file under edit.
-It is preferred over <inspectionToolProvider>
-@see intellij.platform.resources.LangExtensionPoints
-@see com.intellij.codeInspection.InspectionProfileEntry
-Attributes:
-language= Language ID
-shortName= Not specified, will be computed by the underlying implementation classes.
-displayName= The string to be shown in the Preferences | Editor | Inspections panel
-The displayName gets registered to identify this inspection.
-Can be localized using key= and bundle= attributes instead.
-groupPath= Defines the outermost grouping for this inspection in
-the Preferences | Editor | Inspections panel. Not localized.
-groupBundle= Name of *.bundle file to translate groupKey.
-In this case reuse an IntelliJ Platform bundle file from intellij.platform.resources.en
-groupKey= Key to use for translation subgroup name using groupBundle file.
-In this case reuse the IntelliJ Platform subcategory "Probable bugs"
-enabledByDefault= Inspection state when Inspections panel is created.
-level= The default level of error found by this inspection, e.g. INFO, ERROR, etc.
-@see com.intellij.codeHighlighting.HighlightDisplayLevel
-implementationClass= FQN of inspection implementation
--->
+                Extend the IntelliJ Platform local inspection type, and connect it to the implementation class in this plugin.
+                <localInspection> type element is applied within the scope of a file under edit.
+                It is preferred over <inspectionToolProvider>
+                @see intellij.platform.resources.LangExtensionPoints
+                @see com.intellij.codeInspection.InspectionProfileEntry
+                Attributes:
+                language= Language ID
+                shortName= Not specified, will be computed by the underlying implementation classes.
+                displayName= The string to be shown in the Preferences | Editor | Inspections panel
+                The displayName gets registered to identify this inspection.
+                Can be localized using key= and bundle= attributes instead.
+                groupPath= Defines the outermost grouping for this inspection in
+                the Preferences | Editor | Inspections panel. Not localized.
+                groupBundle= Name of *.bundle file to translate groupKey.
+                In this case reuse an IntelliJ Platform bundle file from intellij.platform.resources.en
+                groupKey= Key to use for translation subgroup name using groupBundle file.
+                In this case reuse the IntelliJ Platform subcategory "Probable bugs"
+                enabledByDefault= Inspection state when Inspections panel is created.
+                level= The default level of error found by this inspection, e.g. INFO, ERROR, etc.
+                @see com.intellij.codeHighlighting.HighlightDisplayLevel
+                implementationClass= FQN of inspection implementation
+            -->
     </extensions>
 
     <actions>
@@ -117,7 +117,7 @@ implementationClass= FQN of inspection implementation
                 description=" log">
         </action>
 
-        <action id="helperAction" class="com.geekmake.plugin.HelperAction"
+        <action id="helperAction" class="com.geekmake.plugin.action.HelperAction"
                 text="Java Command Idea Help"
                 description=" helperAction">
         </action>

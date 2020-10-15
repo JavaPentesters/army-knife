@@ -3,7 +3,7 @@ package com.geekmake.plugin.action.middleware;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.geekmake.plugin.BaseAnAction;
+import com.geekmake.plugin.action.BaseAnAction;
 import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.dialog.DubboCommandDialog;
 import com.geekmake.plugin.utils.ClipboardUtils;

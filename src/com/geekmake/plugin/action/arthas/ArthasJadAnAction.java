@@ -1,12 +1,11 @@
 package com.geekmake.plugin.action.arthas;
 
-import com.geekmake.plugin.BaseAnAction;
+import com.geekmake.plugin.action.BaseAnAction;
 import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
 
 /**
- *
  *
  * @author pez1420@gmail.com
  * @version $Id: ArthasJadAnAction.java v 0.1 2020/3/26 9:53 下午 pez1420 Exp $$
@@ -14,7 +13,6 @@ import com.geekmake.plugin.utils.NotificationUtils;
 public class ArthasJadAnAction extends BaseAnAction {
 
     /**
-     * jad cn.com.servyou.irc.shared.auth.impl.strategy.authorize.standard.StandardDefaultAuthorizeStrategy
      *
      * @param actionEvent ActionEvent
      */

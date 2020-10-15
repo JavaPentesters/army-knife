@@ -71,6 +71,11 @@ public class ComparingReferencesInspection extends AbstractBaseJavaLocalInspecti
      * that inspects expressions with relational operators '==' and '!='.
      * The visitor must not be recursive and must be thread-safe.
      *
+     * 覆盖AbstractBaseJavaLocalInspectionTool#buildVisitor接口，自定义visitor对象。visitor对象便利的目的是检查表达式是否使用了'==' and '!='
+     * visito必须是线程安全的且是递并不能递归的
+     * ProblemsHolder收集并持有visitor发现的问题
+     * isOnTheFly：ture表示检查以非批量模式运行
+     *
      * @param holder     object for visitor to register problems found.
      * @param isOnTheFly true if inspection was run in non-batch mode
      * @return non-null visitor for this inspection.
@@ -103,6 +108,9 @@ public class ComparingReferencesInspection extends AbstractBaseJavaLocalInspecti
              * Evaluate binary psi expressions to see if they contain relational operators '==' and '!=', AND they contain
              * classes contained in CHECKED_CLASSES. The evaluation ignores expressions comparing an object to null.
              * IF this criteria is met, add the expression to the problems list.
+             * 检查psi布尔表示是否存在关系型操作符号：'==' 和 '!='，并且类是包含在CHECKED_CLASSES列表中的。
+             * 检查忽略比较一个对象为null值的表达式，如果这些条件满足，则将表达式注册到问题列表(ProblemsHolder)
+             *
              *
              * @param expression The binary expression to be evaluated.
              */
@@ -154,6 +162,9 @@ public class ComparingReferencesInspection extends AbstractBaseJavaLocalInspecti
     /**
      * This class provides a solution to inspection problem expressions by manipulating the PSI tree to use 'a.equals(b)'
      * instead of '==' or '!='.
+     *
+     *  提供了一种检查问题表达式的方案，篡改PSI tree将表达式中的'==' or '!='替换为'a.equals(b)'
+     *
      */
     private static class CriQuickFix implements LocalQuickFix {
 
@@ -171,17 +182,24 @@ public class ComparingReferencesInspection extends AbstractBaseJavaLocalInspecti
 
         /**
          * This method manipulates the PSI tree to replace 'a==b' with 'a.equals(b)' or 'a!=b' with '!a.equals(b)'.
+         *  针对visitBinaryExpression方法已检查出的问题列表。
+         *  applyFix方法的目的通过篡改PST tree快速修复问题，达到的效果是'a==b'替换为'a.equals(b)'，'a!=b'替换为'!a.equals(b)'
          *
          * @param project    The project that contains the file being edited.
+         *
          * @param descriptor A problem found by this inspection.
          */
         @Override
         public void applyFix(@NotNull Project project, @NotNull ProblemDescriptor descriptor) {
             try {
+                // 返回问题对应的表达式
                 PsiBinaryExpression binaryExpression = (PsiBinaryExpression) descriptor
                     .getPsiElement();
+                // 表达式操作符
                 IElementType opSign = binaryExpression.getOperationTokenType();
+                // 左表达式
                 PsiExpression lExpr = binaryExpression.getLOperand();
+                // 右表达式
                 PsiExpression rExpr = binaryExpression.getROperand();
                 if (rExpr == null) {
                     return;

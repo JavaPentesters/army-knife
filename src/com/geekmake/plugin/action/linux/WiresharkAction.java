@@ -1,6 +1,6 @@
 package com.geekmake.plugin.action.linux;
 
-import com.geekmake.plugin.BaseAnAction;
+import com.geekmake.plugin.action.BaseAnAction;
 import com.geekmake.plugin.config.IdeActionEvent;
 import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.NotificationUtils;
