@@ -6,10 +6,14 @@ package com.geekmake.plugin;
  */
 public class Constants {
 
-    public static final String GITHUB_URL = "https://github.com/JavaPentesters/army-knife";
+    public static final String GITHUB_URL       = "https://github.com/JavaPentesters/army-knife";
 
-    public static final String DOT_JAVA   = ".java";
+    public static final String GITHUB_DOCS_PATH = GITHUB_URL + "/blob/master/docs/";
 
-    public static final String DOT_CLASS  = ".class";
+    public static final String ARTHAS_URL       = "https://arthas.aliyun.com/doc/heapdump.html";
+
+    public static final String DOT_JAVA         = ".java";
+
+    public static final String DOT_CLASS        = ".class";
 
 }

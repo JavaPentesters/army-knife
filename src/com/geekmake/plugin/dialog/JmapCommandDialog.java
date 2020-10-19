@@ -1,5 +1,7 @@
 package com.geekmake.plugin.dialog;
 
+import static com.geekmake.plugin.Constants.GITHUB_DOCS_PATH;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
@@ -136,7 +138,7 @@ public class JmapCommandDialog extends JDialog {
         bestExample = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "jmap.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "jmap.md");
             }
         });
         bestExample.setPaintUnderline(false);

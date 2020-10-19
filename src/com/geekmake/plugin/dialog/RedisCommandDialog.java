@@ -1,5 +1,7 @@
 package com.geekmake.plugin.dialog;
 
+import static com.geekmake.plugin.Constants.GITHUB_DOCS_PATH;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -160,7 +162,7 @@ public class RedisCommandDialog extends JDialog {
         commonIssuesLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "redis.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "redis.md");
             }
         });
         commonIssuesLink.setPaintUnderline(false);
@@ -168,7 +170,7 @@ public class RedisCommandDialog extends JDialog {
         deadLockLink = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "redis.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "redis.md");
             }
         });
         deadLockLink.setPaintUnderline(false);

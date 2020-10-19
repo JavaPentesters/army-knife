@@ -1,5 +1,7 @@
 package com.geekmake.plugin.dialog;
 
+import static com.geekmake.plugin.Constants.GITHUB_DOCS_PATH;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -106,7 +108,7 @@ public class DubboCommandDialog extends JDialog {
         link4 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "dubbo.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "dubbo.md");
             }
         });
         link4.setPaintUnderline(false);
@@ -117,6 +119,7 @@ public class DubboCommandDialog extends JDialog {
     }
 
     public void open(String title) {
+        this.setSize(600, 200);
         setTitle(title);
         pack();
         setLocationRelativeTo(WindowManager.getInstance().getFrame(this.project));

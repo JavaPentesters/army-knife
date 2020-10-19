@@ -1,5 +1,7 @@
 package com.geekmake.plugin.dialog;
 
+import static com.geekmake.plugin.Constants.GITHUB_DOCS_PATH;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -111,7 +113,7 @@ public class LinuxOpenFileDialog extends JDialog {
         link0 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "linux.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "linux.md");
             }
         });
         link0.setPaintUnderline(false);
@@ -120,7 +122,7 @@ public class LinuxOpenFileDialog extends JDialog {
         link1 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "linux.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "linux.md");
             }
         });
         link1.setPaintUnderline(false);
@@ -128,7 +130,7 @@ public class LinuxOpenFileDialog extends JDialog {
         link2 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "linux.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "linux.md");
             }
         });
         link2.setPaintUnderline(false);
@@ -136,7 +138,7 @@ public class LinuxOpenFileDialog extends JDialog {
         link3 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "linux.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "linux.md");
             }
         });
         link3.setPaintUnderline(false);
@@ -144,7 +146,7 @@ public class LinuxOpenFileDialog extends JDialog {
         link4 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse(Constants.GITHUB_URL + "/docs/" + "linux.md");
+                BrowserUtil.browse(GITHUB_DOCS_PATH + "linux.md");
             }
         });
         link4.setPaintUnderline(false);
