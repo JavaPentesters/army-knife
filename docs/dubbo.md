@@ -1,4 +1,6 @@
 
+## dubbo
+
 #### 1. invoke
 
 +$ invoke cn.com.XxxService.login({"password":"xxx","username":"xxxx"})
@@ -8,9 +10,11 @@
 
 #### 2. status -l
 
-+$ status -l: 显示状态列表
++$ status -l
+>  显示状态列表
 
-+$  shutdown -t 1000: 延迟 1000 毫秒关闭 dubbo 应用
++$  shutdown -t 1000
+> 延迟 1000 毫秒关闭 dubbo 应用
 
 #### 3. count
 

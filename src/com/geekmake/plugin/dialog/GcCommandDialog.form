@@ -74,61 +74,6 @@
           <text value="grep 'CMS-initial-mark' gc.log"/>
         </properties>
       </component>
-      <component id="fd0a0" class="com.intellij.ui.components.labels.LinkLabel" binding="link1" custom-create="true">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="2、找到cpu最高的线程tid并转换为16进制"/>
-        </properties>
-      </component>
-      <component id="df60f" class="javax.swing.JTextField" binding="textField1">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="printf '%x\n' tid"/>
-        </properties>
-      </component>
-      <component id="42eb7" class="com.intellij.ui.components.labels.LinkLabel" binding="link2" custom-create="true">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="3、根据16进制线程tid找到线程堆栈信息"/>
-        </properties>
-      </component>
-      <component id="38aad" class="javax.swing.JTextField" binding="textField2">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="jstack pid | grep tid -C 30 --color"/>
-        </properties>
-      </component>
-      <component id="7940c" class="com.intellij.ui.components.labels.LinkLabel" binding="link3" custom-create="true">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="4、查看处于BLOCKED状态的线程"/>
-        </properties>
-      </component>
-      <component id="9e704" class="javax.swing.JTextField" binding="textField3">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="600" height="-1"/>
-            <preferred-size width="500" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=" jstack -l pid |grep &quot;BLOCKED&quot;|wc -l"/>
-        </properties>
-      </component>
       <component id="c8610" class="com.intellij.ui.components.labels.LinkLabel" binding="link4" custom-create="true">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>

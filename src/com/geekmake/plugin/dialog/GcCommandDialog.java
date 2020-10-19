@@ -111,7 +111,7 @@ public class GcCommandDialog extends JDialog {
         link0 = new ActionLink("", AllIcons.Ide.Link, new AnAction() {
             @Override
             public void actionPerformed(AnActionEvent anActionEvent) {
-                BrowserUtil.browse("https://www.geek-make.com");
+                BrowserUtil.browse(Constants.GITHUB_URL);
             }
         });
         link0.setPaintUnderline(false);

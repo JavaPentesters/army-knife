@@ -7,7 +7,6 @@ package com.geekmake.plugin.action.jvm.enums;
 public enum JmapCommandEnum {
     JMAP_HEAP("jmap -heap 3831", "显示Java堆详细信息"),
     JMAP_HISTO_1("jmap -histo[:live] 3831 | sort -k 2 -g -r", "查看对象数最多的对象，按降序输出"),
-    JMAP_HISTO_2("jmap -histo[:live] 3831 | sort -k 3 -g -r", "查看内存的对象，按降序输出"),
     JMAP_DUMP(" jmap -dump:format=b,file=dump.hprof 3831", "Dump jvm当前内存中的情况到文件");
 
 
