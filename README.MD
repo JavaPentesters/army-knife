@@ -27,6 +27,7 @@
 ## Quick Start
 
 + 本地磁盘方式安装
+> Preferences/Plugins/Installed/Install from disk，选择army-knife.jar
 
 + Jetbrain plugin repository方式安装
 
