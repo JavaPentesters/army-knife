@@ -3,7 +3,6 @@
     <name>army-knife</name>
     <version>1.1</version>
     <vendor email="pez1420@gmail.com" url="http://www.geek-make.com">geekmaker</vendor>
-
     <description><![CDATA[
         Replaced by description.html .....................
     ]]></description>
@@ -12,18 +11,20 @@
         Replaced by CHANGELOG.md .....................
     ]]></change-notes>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="173.0"/>
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <localInspection
-                language="XML" groupPath="XML" displayName="GeekSec 101: Mybatis XML SQL注入漏洞"
-                groupName="GeekSec" enabledByDefault="true" level="ERROR"
+                language="XML" groupPath="XML" displayName="17winSec 101: Mybatis XML SQL注入漏洞"
+                groupName="17winSec" enabledByDefault="true" level="ERROR" key="17winSec 101: Mybatis XML SQL注入漏洞"
                 implementationClass="com.geekmake.plugin.security.rule.MybatisXmlSQLi"
+        />
+
+        <localInspection
+                language="XML" groupPath="XML" displayName="17winSec 102: Fastjson反序列化风险"
+                groupName="17winSec" enabledByDefault="true" level="ERROR" key="17winSec 102: Fastjson反序列化风险"
+                implementationClass="com.geekmake.plugin.security.rule.FastjsonAutoTypeRule"
         />
 
         <localInspection language="JAVA"
@@ -34,30 +35,6 @@
                          enabledByDefault="true"
                          level="ERROR"
                          implementationClass="com.geekmake.plugin.security.rule.ComparingReferencesInspection"/>
-
-        <!--
-                Extend the IntelliJ Platform local inspection type, and connect it to the implementation class in this plugin.
-                <localInspection> type element is applied within the scope of a file under edit.
-                It is preferred over <inspectionToolProvider>
-                @see intellij.platform.resources.LangExtensionPoints
-                @see com.intellij.codeInspection.InspectionProfileEntry
-                Attributes:
-                language= Language ID
-                shortName= Not specified, will be computed by the underlying implementation classes.
-                displayName= The string to be shown in the Preferences | Editor | Inspections panel
-                The displayName gets registered to identify this inspection.
-                Can be localized using key= and bundle= attributes instead.
-                groupPath= Defines the outermost grouping for this inspection in
-                the Preferences | Editor | Inspections panel. Not localized.
-                groupBundle= Name of *.bundle file to translate groupKey.
-                In this case reuse an IntelliJ Platform bundle file from intellij.platform.resources.en
-                groupKey= Key to use for translation subgroup name using groupBundle file.
-                In this case reuse the IntelliJ Platform subcategory "Probable bugs"
-                enabledByDefault= Inspection state when Inspections panel is created.
-                level= The default level of error found by this inspection, e.g. INFO, ERROR, etc.
-                @see com.intellij.codeHighlighting.HighlightDisplayLevel
-                implementationClass= FQN of inspection implementation
-            -->
     </extensions>
 
     <actions>
@@ -117,6 +94,11 @@
                 description=" log">
         </action>
 
+        <action id="uptimeAction" class="com.geekmake.plugin.action.linux.UptimeAction"
+                text=" 查看机器的启动时间、登陆用户、系统平均负载"
+                description=" uptime">
+        </action>
+
         <action id="helperAction" class="com.geekmake.plugin.action.HelperAction"
                 text="Java Command Idea Help"
                 description=" helperAction">
@@ -170,6 +152,7 @@
             <group id="army-knife-plugin-linux" popup="true" text="Linux">
                 <reference ref="linuxLogAction"/>
                 <reference ref="openFileAction"/>
+                <reference ref="uptimeAction"/>
             </group>
             <separator/>
             <group id="army-knife-plugin-http" popup="true" text="Http">

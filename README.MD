@@ -19,7 +19,8 @@
     + 插件提供了排查Java中间件的常见命令，如Dubbo、Redis、Netty、RocketMQ、Nginx(Openresty)等常用命令
     + 插件提供了Http请求相关的命令，如curl发起JSON类型请求等
 + 插件提供了Java代码静态审查和安全漏洞quick fix修复功能
-    + Mybatis xml SQL Injection
+    + 1001: Mybatis xml SQL Injection
+    + 1002: XStream反序列化风险
 + 插件针对每一条命令提供了详尽的案例，使你能够理论联系实际，知其然更知其所以然。
 + 插件支持JDK7 +
 + 插件支持Linux/Mac

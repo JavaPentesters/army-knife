@@ -20,11 +20,7 @@ import com.intellij.openapi.wm.WindowManager;
 import com.intellij.ui.components.labels.ActionLink;
 import com.intellij.ui.components.labels.LinkLabel;
 
-/**
- * @author pez1420@gmail.com
- * @version $Id: MysqlCommandDialog.java v 0.1 2020/3/26 7:02 下午 pez1420 Exp $$
- */
-public class RedisCommandDialog extends JDialog {
+public class KakfaCommandDialog extends JDialog {
 
     /** 项目信息 */
     private Project    project;
@@ -51,12 +47,14 @@ public class RedisCommandDialog extends JDialog {
     private LinkLabel  link3;
     private LinkLabel  commonIssuesLink;
     private LinkLabel  deadLockLink;
+    private JTextField textField3;
+    private JButton    copyButton3;
     private LinkLabel  link4;
 
     private JTextField textField4;
     private JTextArea  textArea1;
 
-    public RedisCommandDialog(Project project) {
+    public KakfaCommandDialog(Project project) {
         this.project = project;
 
         setContentPane(contentPane);
@@ -91,20 +89,9 @@ public class RedisCommandDialog extends JDialog {
         });
 
         copyButton2.addActionListener(e -> {
-            ClipboardUtils.setClipboardContent("redis-cli -h 192.168.1.1 -p 6379 client list | awk '{print $2}'| cut -d = -f 2| cut -d : -f 1 | sort | uniq -c | sort -rn | awk '{\"host \" $2 | getline h; print $1 \"\\t\" $2 \"\\t\" h;}'| awk '{print $1 \"\\t\" $2 \"\\t\" $7}'");
+            ClipboardUtils.setClipboardContent(textField2.getText());
             NotificationUtils.showMessage();
         });
-
-        //        copyButton3.addActionListener(e -> {
-        //            ClipboardUtils.setClipboardContent(
-        //                "redis-cli -h 192.168.1.1 -p 6379 client list | awk '{print $2}'| cut -d = -f 2| cut -d : -f 1 | sort | uniq -c | sort -rn | awk '{\"host \" $2 | getline h; print $1 \"\\t\" $2 \"\\t\" h;}'| awk '{print $1 \"\\t\" $2 \"\\t\" $7}'");
-        //            NotificationUtils.showMessage();
-        //        });
-        //
-        //        copyButton4.addActionListener(e -> {
-        //            ClipboardUtils.setClipboardContent(textField4.getText());
-        //            NotificationUtils.showMessage();
-        //        });
 
         cancelButton.addActionListener(e -> onCancel());
 

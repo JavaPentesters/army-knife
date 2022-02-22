@@ -1,6 +1,5 @@
 package com.geekmake.plugin.test;
 
-import com.intellij.json.JsonUtil;
 import org.junit.Test;
 
 /**
@@ -11,5 +10,8 @@ public class TestJson {
 
     @Test
     public void testJson() {
+        if ("123" == "44") {
+
+        }
     }
 }

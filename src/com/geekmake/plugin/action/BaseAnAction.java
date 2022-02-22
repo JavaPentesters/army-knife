@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 
 import com.geekmake.plugin.Constants;
 import com.geekmake.plugin.config.IdeActionEvent;
-import com.geekmake.plugin.utils.ClipboardUtils;
 import com.geekmake.plugin.utils.PsiUtils;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -28,7 +27,7 @@ import com.intellij.psi.impl.source.PsiClassReferenceType;
 public abstract class BaseAnAction extends AnAction {
 
     /** 日志记录器 */
-    private static final Logger logger = LoggerFactory.getLogger(ClipboardUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(BaseAnAction.class);
 
     /**
      * 处理 PsiMethod
